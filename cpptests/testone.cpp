@@ -65,7 +65,7 @@ int main()
     
   std::cout << "Enter two fractional numbers\n";
   
-  double x {};
+  double x {};//I should have made a function that just stores a double instead of doing 2 different ::cin     
   std::cin >> x;
 
   double y {};
