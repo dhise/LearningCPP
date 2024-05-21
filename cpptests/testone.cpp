@@ -12,7 +12,7 @@ The program computes the answer on the two numbers the user entered and prints t
 
 #include <iostream>
 
-
+//Not using the switch method below as I couldn't get it to work here. I got it working afterwards in my other solution for this question
 /*
 void myCalc(char ch1, double x, double y){
 
