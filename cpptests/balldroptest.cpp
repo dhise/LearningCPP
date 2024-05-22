@@ -23,10 +23,6 @@ At 4 seconds, the ball is at height: 21.6 meters
 At 5 seconds, the ball is on the ground.
 
 
-100 > 95.1 = 4.9
-100 > 80.4 = 19.6
-
-
 */
 
 double getHeight()
