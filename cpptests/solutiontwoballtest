@@ -1,0 +1,45 @@
+\\Decided to take another crack at it
+\\I accepted that if i'm not going to use a while loop I will be okay with multiple lines of the same function while manually putting in the seconds
+\\this was much easier and took me about 8 minutes to do this time
+
+#include <iostream>
+
+
+double getHeight(){
+
+  std::cout << "Enter a height to drop the ball from\n";
+  double dropHeight {};
+  std::cin >> dropHeight;
+  return dropHeight;
+}
+
+double ballHeight(double currentHeight, double seconds)
+{
+  
+  currentHeight = currentHeight - 9.8 * (seconds * seconds)/2;
+  if (currentHeight < 0)
+  {
+    std::cout << "Ball is on the ground\n";
+    return 0;
+  }
+  std::cout << "At " << seconds << " seconds the balle is at " << currentHeight << " meters\n"; 
+  return currentHeight;
+  
+}
+
+
+
+int main()
+{
+    
+  double currentHeight {getHeight()};
+  currentHeight = ballHeight(currentHeight, 0);
+  currentHeight = ballHeight(currentHeight, 1);
+  currentHeight = ballHeight(currentHeight, 2);
+  currentHeight = ballHeight(currentHeight, 3);
+  currentHeight = ballHeight(currentHeight, 4);
+  currentHeight = ballHeight(currentHeight, 5);
+  //currentHeight = 9.8 *(seconds * seconds)/2
+  
+  return 0;
+}
