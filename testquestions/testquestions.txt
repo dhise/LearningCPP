@@ -1,0 +1,135 @@
+
+
+Write a program that asks the user to enter a number, and then enter a second number. The program should tell the user what the result of adding and subtracting the two numbers is.
+
+The output of the program should match the following (assuming inputs of 6 and 4):
+
+Enter an integer: 6
+Enter another integer: 4
+6 + 4 is 10.
+6 - 4 is 2.
+
+
+
+
+
+Write a single-file program (named main.cpp) that reads two separate integers from the user, adds them together, and then outputs the answer. The program should use three functions:
+
+A function named “readNumber” should be used to get (and return) a single integer from the user.
+A function named “writeAnswer” should be used to output the answer. This function should take a single parameter and have no return value.
+A main() function should be used to glue the above functions together.
+
+Third question
+
+
+
+
+
+
+Modify the program you wrote in exercise #1 so that readNumber() and writeAnswer() live in a separate file called “io.cpp”. Use a forward declaration to access them from main().
+
+If you’re having problems, make sure “io.cpp” is properly added to your project so it gets compiled.
+
+
+Modify the program you wrote in #2 so that it uses a header file (named io.h) to access the functions instead of using forward declarations directly in your code (.cpp) files. Make sure your header file uses header guards.
+
+
+
+
+
+
+Write the following program: The user is asked to enter 2 floating point numbers (use doubles). The user is then asked to enter one of the following mathematical symbols: +, -, *, or /. The program computes the answer on the two numbers the user entered and prints the results. If the user enters an invalid symbol, the program should print nothing.
+
+Example of program:
+
+Enter a double value: 6.2
+Enter a double value: 5
+Enter +, -, *, or /: *
+6.2 * 5 is 31
+
+
+
+
+
+Write a short program to simulate a ball being dropped off of a tower. To start, the user should be asked for the height of the tower in meters. Assume normal gravity (9.8 m/s2), and that the ball has no initial velocity (the ball is not moving to start). Have the program output the height of the ball above the ground after 0, 1, 2, 3, 4, and 5 seconds. The ball should not go underneath the ground (height 0).
+
+Use a function to calculate the height of the ball after x seconds. The function can calculate how far the ball has fallen after x seconds using the following formula: distance fallen = gravity_constant * x_seconds2 / 2
+
+Expected output:
+
+Enter the height of the tower in meters: 100
+At 0 seconds, the ball is at height: 100 meters
+At 1 seconds, the ball is at height: 95.1 meters
+At 2 seconds, the ball is at height: 80.4 meters
+At 3 seconds, the ball is at height: 55.9 meters
+At 4 seconds, the ball is at height: 21.6 meters
+At 5 seconds, the ball is on the ground.
+Note: Depending on the height of the tower, the ball may not reach the ground in 5 seconds -- that’s okay. We’ll improve this program once we’ve covered loops.
+Note: The ^ symbol isn’t an exponent in C++. Implement the formula using multiplication instead of exponentiation.
+Note: Remember to use double literals for doubles, e.g. 2.0 rather than 2.
+
+
+
+
+
+Write a program that asks for the name and age of two people, then prints which person is older.
+
+Here is the sample output from one run of the program:
+
+Enter the name of person #1: John Bacon
+Enter the age of John Bacon: 37
+Enter the name of person #2: David Jenkins
+Enter the age of David Jenkins: 44
+David Jenkins (age 44) is older than John Bacon (age 37).
+
+
+
+
+
+Complete the following program:
+
+#include <iostream>
+
+// Write the function getQuantityPhrase() here
+
+// Write the function getApplesPluralized() here
+
+int main()
+{
+    constexpr int maryApples { 3 };
+    std::cout << "Mary has " << getQuantityPhrase(maryApples) << ' ' << getApplesPluralized(maryApples) << ".\n";
+
+    std::cout << "How many apples do you have? ";
+    int numApples{};
+    std::cin >> numApples;
+
+    std::cout << "You have " << getQuantityPhrase(numApples) << ' ' << getApplesPluralized(numApples) << ".\n";
+
+    return 0;
+}
+Sample output:
+
+Mary has a few apples.
+How many apples do you have? 1
+You have a single apple.
+getQuantityPhrase() should take a single int parameter representing the quantity of something and return the following descriptor:
+
+< 0 = “negative”
+0 = “no”
+1 = “a single”
+2 = “a couple of”
+3 = “a few”
+> 3 = “many”
+getApplesPlural() should take a single int parameter parameter representing the quantity of apples and return the following:
+
+1 = “apple”
+otherwise = “apples”
+This function should use the conditional operator.
+
+Both functions should make proper use of constexpr.
+
+
+
+
+
+
