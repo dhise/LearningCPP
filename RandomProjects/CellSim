@@ -1,0 +1,68 @@
+#include <unistd.h> //sleep
+#include <iostream>
+
+using namespace std;
+
+
+bool isHungry(float maxEnergy, float currentEnergy)
+{
+
+  float hunger {maxEnergy / currentEnergy};
+  if (hunger > 3.01)
+  {
+    std::cout << "Bob is hungry\n";
+    return hunger;
+  } 
+  std::cout << "Bob is not hungry";
+  return hunger;
+}
+
+int hunting(string cellName)
+{
+  std::cout << cellName << " is hunting for micro organisms \n";
+  
+  return 0;
+}
+
+class BasicCell
+{
+public:
+  string m_name{"Eve"};
+  int m_life{};
+  int m_thinkingPower{};
+  int m_thinkingSpeed{};
+
+};
+
+void printCell(BasicCell& man)
+{
+  cout << man.m_name << man.m_life << man.m_thinkingPower << man.m_thinkingSpeed;
+  
+}
+
+int main(){
+
+  string cellNameInput {};
+  cout << "Enter a cell name\n";
+  cin >> cellNameInput;
+  BasicCell man{cellNameInput, 30, 15, 15};
+  printCell(man);
+
+
+
+  int maxEnergy {100};
+  int currentEnergy {maxEnergy};
+  int massLevel {1};
+  int massPoints {0};
+  double size {3 + (1.2 * massLevel)};
+  int movement {2};
+
+  
+  
+
+
+  
+  
+  
+  return 0;
+}
